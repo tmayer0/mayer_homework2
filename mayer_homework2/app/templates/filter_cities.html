@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.name.label }} {{ form.name() }}
+        {{ form.region.label }} {{ form.region() }}
+        {{ form.country.label }} {{ form.country() }}
+        {{ form.submit() }}
+    </form>
+    {% if cities %}
+        {% for city in cities %}
+            <h2>{{ city.name }}</h2>
+            <p>Region: {{ city.region }}</p>
+            <p>Country: {{ city.country }}</p>
+            <p>Latitude: {{ city.latitude }}</p>
+            <p>Longitude: {{ city.longitude }}</p>
+            <p>Population: {{ city.population }}</p>
+            <p>Timezone: {{ city.timezone }}</p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
