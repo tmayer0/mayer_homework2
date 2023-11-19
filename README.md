@@ -1,4 +1,3 @@
-Homework 2 - Theo Mayer
 This app uses GeoDB Cities API to populate a SQLite database with countries and cities.
 Since it is the free version, it only can fetch a limited number of countries and cities.
 The user can click on the links in the navbar to be taken to two different forms for queries.
