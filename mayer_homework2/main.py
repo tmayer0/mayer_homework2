@@ -8,7 +8,6 @@ db.init_app(app)
 app.config['SECRET_KEY'] = 'homework2'
 
 with app.app_context():
-    print("Creating tables...")
     db.create_all()
 
 if __name__ == '__main__':

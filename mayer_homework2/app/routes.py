@@ -95,3 +95,15 @@ def show_cities():
     for city in cities:
         print(city.name)
     return "Cities printed to console"
+
+@app.route('/print_db')
+def print_db():
+    print("Countries:")
+    for country in Country.query.all():
+        print(country.name)
+
+    print("Cities:")
+    for city in City.query.all():
+        print(city.name)
+
+    return "Database contents printed to console"
